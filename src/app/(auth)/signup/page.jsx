@@ -2,24 +2,46 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { authClient } from "../../../lib/auth-client";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const SignUpPage = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-  const handleRegFunc = (data) => {
+  const handleRegFunc = async (data) => {
     const { name, photo, email, password } = data;
+
+    const { data: res, error } = await authClient.signUp.email({
+      name: name,
+      email: email,
+      password: password,
+      image: photo,
+      fetchOptions: {
+        headers: {
+          "x-dont-remember-me": "true",
+        },
+      },
+    });
+    if (error) {
+      toast.error(error.message);
+    }
+    if (res) {
+      await authClient.signOut();
+      router.push("/signin");
+    }
   };
 
   return (
-    <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 ">
-      <div className="bg-white min-w-md px-3 py-8 my-10">
+    <div className="min-h-screen flex justify-center items-center bg-gray-50 px-4 ">
+      <div className="bg-white w-full max-w-md px-6 py-8 rounded-xl shadow-md">
         <h1 className="text-center font-bold text-3xl">User Registration</h1>
         <div className="divider"></div>
         <form onSubmit={handleSubmit(handleRegFunc)}>

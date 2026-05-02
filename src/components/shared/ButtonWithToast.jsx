@@ -14,7 +14,6 @@ const ButtonWithToast = ({ bookTitle }) => {
       <button onClick={handleBorrow} className="btn btn-primary btn-lg w-full">
         Borrow This Book
       </button>
-      <ToastContainer />
     </>
   );
 };
