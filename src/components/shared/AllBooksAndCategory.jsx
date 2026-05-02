@@ -4,37 +4,69 @@ import BookCard from "./BookCard";
 
 const AllBooksAndCategory = ({ books, categories }) => {
   const [selected, setSelected] = useState(null);
-  const filtered = selected
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const categoryFiltered = selected
     ? books.filter((b) => b.category === selected)
     : books;
 
+  const filtered = categoryFiltered.filter((b) =>
+    b.title.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
+
   return (
-    <div className="flex gap-6">
-      <aside className="w-48 shrink-0">
-        <h3 className="font-bold text-lg mb-4">Categories</h3>
-        <ul className="space-y-2">
-          {categories.map((cat, ind) => (
-            <li key={ind}>
-              <button
-                onClick={() => setSelected(cat)}
-                className={`w-full text-left px-4 py-2 rounded-lg transition
+    <div>
+      <input
+        type="text"
+        placeholder="Search books by title..."
+        className="input input-bordered w-full mb-6"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <div className="flex gap-6">
+        <aside className="w-48 shrink-0">
+          <h3 className="font-bold text-lg mb-4">Categories</h3>
+          <ul className="space-y-2">
+            {categories.map((cat, ind) => (
+              <li key={ind}>
+                <button
+                  onClick={() => setSelected(cat)}
+                  className={`w-full text-left px-4 py-2 rounded-lg transition
                   ${
                     selected === cat
-                      ? "bg-primary text-primary-content"
+                      ? "bg-gray-200 text-black"
+                      : "hover:bg-base-200"
+                  }`}
+                >
+                  {cat}
+                </button>
+              </li>
+            ))}
+            <li>
+              <button
+                onClick={() => setSelected(null)}
+                className={`w-full text-left px-4 py-2 rounded-lg transition
+                  ${
+                    selected === null
+                      ? "bg-gray-200 text-black"
                       : "hover:bg-base-200"
                   }`}
               >
-                {cat}
+                All Books
               </button>
             </li>
-          ))}
-        </ul>
-      </aside>
-      <div className="flex-1">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((book, ind) => (
-            <BookCard key={ind} book={book} />
-          ))}
+          </ul>
+        </aside>
+        <div className="flex-1">
+          {filtered.length === 0 ? (
+            <p className="text-center text-gray-500 mt-10">No books found!</p>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((book, ind) => (
+                <BookCard key={ind} book={book} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
