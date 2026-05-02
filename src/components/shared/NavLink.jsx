@@ -10,6 +10,7 @@ const NavLink = ({ href, children }) => {
     <Link
       className={`${isActive ? "border-b-4 border-b-purple-300" : ""}`}
       href={href}
+      onClick={() => document.activeElement.blur()}
     >
       {children}
     </Link>

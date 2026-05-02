@@ -28,6 +28,18 @@ const NavBar = () => {
           <NavLink href={"/profile"}>My Profile</NavLink>
         </li>
       )}
+      {user && (
+        <li className="md:hidden">
+          <span className="font-medium">hello! {user.name}</span>
+        </li>
+      )}
+      {user && (
+        <li className="md:hidden">
+          <button onClick={handleSignOut} className="text-red-600">
+            Logout
+          </button>
+        </li>
+      )}
     </>
   );
 
@@ -71,12 +83,12 @@ const NavBar = () => {
           ""
         ) : user ? (
           <>
-            <h2 className="mr-4">hello! {user.name}</h2>
+            <h2 className="mr-4 hidden md:block">hello! {user.name}</h2>
             {user.image && (
               <Image
                 src={user.image}
                 alt="user logo"
-                className="mr-4 rounded-full "
+                className="mr-4 rounded-full hidden md:block object-cover "
                 width={50}
                 height={50}
               />

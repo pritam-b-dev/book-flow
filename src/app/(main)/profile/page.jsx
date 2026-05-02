@@ -28,7 +28,7 @@ const MyProfile = () => {
           )}
           <h2 className="card-title text-2xl">{user.name}</h2>
           <p className="text-gray-500">{user.email}</p>
-          <Link href="/profile/update" className="btn btn-primary w-full mt-4">
+          <Link href="/profile/update" className="btn btn-outline w-full mt-4">
             Update Information
           </Link>
         </div>
