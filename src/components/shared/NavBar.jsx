@@ -30,7 +30,18 @@ const NavBar = () => {
       )}
       {user && (
         <li className="md:hidden">
-          <span className="font-medium">hello! {user.name}</span>
+          <div className="flex items-center gap-2">
+            {user.image && (
+              <Image
+                src={user.image}
+                alt="user logo"
+                className="rounded-full object-cover"
+                width={30}
+                height={30}
+              />
+            )}
+            <span className="font-medium">{user.name}</span>
+          </div>
         </li>
       )}
       {user && (
@@ -95,13 +106,13 @@ const NavBar = () => {
             )}
             <button
               onClick={handleSignOut}
-              className="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition cursor-pointer"
+              className="bg-red-600 text-white hidden md:block px-6 py-2 rounded-md hover:bg-red-700 transition cursor-pointer"
             >
               Logout
             </button>
           </>
         ) : (
-          <Link href={"/signin"} className="bg-black text-white px-8 py-1">
+          <Link href={"/signin"} className="bg-black  text-white px-8 py-1">
             Login
           </Link>
         )}
