@@ -3,7 +3,7 @@ import Banner from "../../components/homepage/Banner";
 import BookMarquee from "../../components/homepage/BookMarquee";
 import FeaturedBooks from "../../components/homepage/FeaturedBooks";
 import BestAuthor from "../../components/homepage/BestAuthor";
-import BundleOffer from "../../components/homepage/BundleOffer";
+import Services from "../../components/homepage/Services";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <BookMarquee />
       <FeaturedBooks />
       <BestAuthor />
-      <BundleOffer />
+      <Services />
     </div>
   );
 }
