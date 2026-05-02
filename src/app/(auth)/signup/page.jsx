@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa6";
 import { authClient } from "../../../lib/auth-client";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -37,6 +38,11 @@ const SignUpPage = () => {
       await authClient.signOut();
       router.push("/signin");
     }
+  };
+  const handleGoogleSignin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -116,6 +122,21 @@ const SignUpPage = () => {
             Register
           </button>
         </form>
+        <p className="mt-5">
+          Already have an account?{" "}
+          <Link href={"/signin"} className="text-red-500">
+            Login now!
+          </Link>
+        </p>
+        <div className="divider">OR</div>
+        <button
+          type="button"
+          className="btn btn-outline border-blue-200 w-full flex gap-3 justify-center items-center mb-2 mt-2 rounded-lg hover:bg-slate-50 transition"
+          onClick={handleGoogleSignin}
+        >
+          <FaGoogle className="text-red-500 text-lg" />
+          Login with Google
+        </button>
       </div>
     </div>
   );
