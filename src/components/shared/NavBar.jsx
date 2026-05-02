@@ -54,7 +54,7 @@ const NavBar = () => {
       </div>
       <div className="navbar-end">
         <Link className="btn btn-ghost" href={"/signin"}>
-          Sign In
+          Login
         </Link>
       </div>
     </div>

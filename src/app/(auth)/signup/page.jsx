@@ -13,16 +13,16 @@ const SignUpPage = () => {
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-  const handleSignUpFunc = (data) => {
+  const handleRegFunc = (data) => {
     const { name, photo, email, password } = data;
   };
 
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 ">
       <div className="bg-white min-w-md px-3 py-8 my-10">
-        <h1 className="text-center font-bold text-3xl">Sign Up Here!</h1>
+        <h1 className="text-center font-bold text-3xl">User Registration</h1>
         <div className="divider"></div>
-        <form onSubmit={handleSubmit(handleSignUpFunc)}>
+        <form onSubmit={handleSubmit(handleRegFunc)}>
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-lg">Name</legend>
             <input
@@ -91,7 +91,7 @@ const SignUpPage = () => {
             type="submit"
             className="btn w-full bg-slate-800 text-white mt-5 rounded-md"
           >
-            Sign-Up
+            Register
           </button>
         </form>
       </div>
