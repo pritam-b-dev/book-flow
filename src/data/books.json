@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A young shepherd named Santiago travels from Spain to Egypt in search of treasure, discovering along the way that the real treasure lies within himself and in following one's dreams.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780061965487-L.jpg"
+  },
+  {
+    "id": "2",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "Set in the American South during the 1930s, this Pulitzer Prize-winning novel explores racial injustice and moral growth through the eyes of young Scout Finch.",
+    "category": "Story",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780061743528-L.jpg"
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel set in a totalitarian society ruled by Big Brother, following Winston Smith's rebellious journey against oppressive government surveillance and control.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+  },
+  {
+    "id": "4",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A story of wealth, love, and the American Dream set in the Jazz Age, following the mysterious millionaire Jay Gatsby and his obsession with the beautiful Daisy Buchanan.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A handbook of agile software craftsmanship that teaches programmers how to write clean, readable, and maintainable code with practical examples and best practices.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+  },
+  {
+    "id": "6",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "A collection of tips and philosophies for software developers to improve their craft, covering topics from personal responsibility to career development and technical skills.",
+    "category": "Tech",
+    "available_quantity": 8,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg"
+  },
+  {
+    "id": "7",
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "description": "A deep dive into the core mechanisms of the JavaScript language, exploring scope, closures, this keyword, prototypes, and asynchronous programming in detail.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9781491904244-L.jpg"
+  },
+  {
+    "id": "8",
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "description": "A comprehensive textbook covering a wide range of algorithms in depth, widely used in computer science courses and considered a must-read for serious programmers.",
+    "category": "Tech",
+    "available_quantity": 2,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg"
+  },
+  {
+    "id": "9",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "Stephen Hawking explores the nature of the universe, covering topics like the Big Bang, black holes, time, and the theory of everything in a way accessible to general readers.",
+    "category": "Science",
+    "available_quantity": 9,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+  },
+  {
+    "id": "10",
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "Dawkins presents a gene-centered view of evolution, arguing that genes are the primary unit of selection and introducing the concept of the meme as a cultural equivalent.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780198788607-L.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A magnificent journey through the universe exploring the origins of life, the nature of science, and humanity's place in the cosmos, written with poetic clarity and wonder.",
+    "category": "Science",
+    "available_quantity": 6,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780345539434-L.jpg"
+  },
+  {
+    "id": "12",
+    "title": "The Double Helix",
+    "author": "James D. Watson",
+    "description": "A personal account of the discovery of the DNA double helix structure, offering an insider view of the competitive and collaborative nature of scientific research.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://covers.openlibrary.org/b/isbn/9780743216302-L.jpg"
+  }
+]
