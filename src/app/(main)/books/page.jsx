@@ -8,7 +8,7 @@ const AllBooksPage = async () => {
   const books = booksData.data;
   const categories = categoriesData.data;
   return (
-    <div className="container mx-auto px-4 py-8 min-h-[50vh]">
+    <div className="container mx-auto px-1 md:px-4 py-8 min-h-[50vh]">
       <h1 className="text-3xl font-bold mb-8">All Books</h1>
       <AllBooksAndCategory books={books} categories={categories} />
     </div>
