@@ -27,11 +27,20 @@ const AllBooksAndCategory = ({ books, categories }) => {
         <aside className="w-full md:w-48 shrink-0">
           <h3 className="font-bold text-lg mb-4">Categories</h3>
           <ul className="flex flex-wrap gap-0.5 md:flex-col md:space-y-2">
+            <li>
+              <button
+                onClick={() => setSelected(null)}
+                className={`md:w-full text-left px-4 py-2 rounded-lg transition
+                   ${selected === null ? "bg-gray-200 text-black" : "hover:bg-base-200"}`}
+              >
+                All Books
+              </button>
+            </li>
             {categories.map((cat, ind) => (
               <li key={ind}>
                 <button
                   onClick={() => setSelected(cat)}
-                  className={`w-full text-left px-4 py-2 rounded-lg transition
+                  className={`md:w-full text-left px-4 py-2 rounded-lg transition
                   ${
                     selected === cat
                       ? "bg-gray-200 text-black"
@@ -42,19 +51,6 @@ const AllBooksAndCategory = ({ books, categories }) => {
                 </button>
               </li>
             ))}
-            <li>
-              <button
-                onClick={() => setSelected(null)}
-                className={`text-left px-4 py-2 rounded-lg transition
-                  ${
-                    selected === null
-                      ? "bg-gray-200 text-black"
-                      : "hover:bg-base-200"
-                  }`}
-              >
-                All Books
-              </button>
-            </li>
           </ul>
         </aside>
         <div className="flex-1">
