@@ -26,7 +26,7 @@ const AllBooksAndCategory = ({ books, categories }) => {
       <div className="flex flex-col md:flex-row gap-6">
         <aside className="w-full md:w-48 shrink-0">
           <h3 className="font-bold text-lg mb-4">Categories</h3>
-          <ul className="flex flex-wrap gap-2 md:flex-col md:space-y-2">
+          <ul className="flex flex-wrap gap-0.5 md:flex-col md:space-y-2">
             {categories.map((cat, ind) => (
               <li key={ind}>
                 <button
