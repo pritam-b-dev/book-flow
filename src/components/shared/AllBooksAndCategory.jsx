@@ -25,9 +25,9 @@ const AllBooksAndCategory = ({ books, categories }) => {
       />
       <div className="flex flex-col md:flex-row gap-6">
         <aside className="w-full md:w-48 shrink-0">
-          <h3 className="font-bold text-lg mb-4">Categories</h3>
-          <ul className="flex flex-wrap gap-0.5 md:flex-col md:space-y-2">
-            <li>
+          <h3 className="hidden font-bold text-lg mb-4">Categories</h3>
+          <ul className="flex overflow-x-auto gap-2 pb-2 md:flex-col md:overflow-x-visible md:space-y-2">
+            <li className="shrink-0">
               <button
                 onClick={() => setSelected(null)}
                 className={`md:w-full text-left px-4 py-2 rounded-lg transition
@@ -37,7 +37,7 @@ const AllBooksAndCategory = ({ books, categories }) => {
               </button>
             </li>
             {categories.map((cat, ind) => (
-              <li key={ind}>
+              <li key={ind} className="shrink-0">
                 <button
                   onClick={() => setSelected(cat)}
                   className={`md:w-full text-left px-4 py-2 rounded-lg transition
