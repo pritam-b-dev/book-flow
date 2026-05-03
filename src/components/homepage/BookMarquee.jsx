@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const BookMarquee = () => {
   return (
-    <div className="border border-gray-500 py-1 overflow-hidden container mx-auto">
+    <div className="border border-gray-300 py-1 overflow-hidden container mx-auto">
       <Marquee
         pauseOnHover={true}
         behavior="scroll"

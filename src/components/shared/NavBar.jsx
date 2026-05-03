@@ -55,7 +55,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm container mx-auto">
+    <div className="navbar bg-base-100 border-b border-b-gray-200 container mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -77,14 +77,14 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-2 mt-3 w-52 p-2 shadow"
           >
             {nav}
           </ul>
         </div>
         <Link
           href={"/"}
-          className="btn btn-ghost text-2xl md:text-4xl font-bold"
+          className="cursor-pointer text-2xl md:text-5xl font-extrabold"
         >
           BookFlow
         </Link>

@@ -1,5 +1,6 @@
 import dns from "node:dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
+import { Nunito } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,6 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+});
+
 export const metadata = {
   title: "Book Flow",
   description: "Trusted online book shop",
@@ -25,7 +31,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-theme="light"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${nunito.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}
