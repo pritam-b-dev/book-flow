@@ -13,10 +13,10 @@ const Footer = () => {
     <footer className="bg-gray-100 text-black p-2 ">
       <div className="container mx-auto text-center">
         {/* Logo Section */}
-        <h2 className="text-5xl font-bold mb-4">BookFlow</h2>
+        <h2 className="text-2xl md:text-5xl font-bold mb-2 mt-2">BookFlow</h2>
 
         {/* Subtitle */}
-        <p className="text-black max-w-xl mx-auto mb-6 text-sm md:text-base">
+        <p className="text-black max-w-xl mx-auto mb-2 text-sm md:text-base">
           A seamless and modern web application designed to digitize the
           traditional library experience.
         </p>

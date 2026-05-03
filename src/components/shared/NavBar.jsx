@@ -82,7 +82,10 @@ const NavBar = () => {
             {nav}
           </ul>
         </div>
-        <Link href={"/"} className="btn btn-ghost text-2xl font-bold">
+        <Link
+          href={"/"}
+          className="btn btn-ghost text-2xl md:text-4xl font-bold"
+        >
           BookFlow
         </Link>
       </div>
@@ -106,13 +109,16 @@ const NavBar = () => {
             )}
             <button
               onClick={handleSignOut}
-              className="bg-red-600 text-white hidden md:block px-6 py-2 rounded-md hover:bg-red-700 transition cursor-pointer"
+              className="btn btn-soft btn-secondary px-8 py-2 hidden md:flex items-center justify-center text-[20px] "
             >
               Logout
             </button>
           </>
         ) : (
-          <Link href={"/signin"} className="bg-black  text-white px-8 py-1">
+          <Link
+            href={"/signin"}
+            className=" text-[20px] rounded-lg btn btn-outline text-black align-middle px-8 py-2"
+          >
             Login
           </Link>
         )}
