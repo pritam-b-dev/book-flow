@@ -23,10 +23,10 @@ const AllBooksAndCategory = ({ books, categories }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <div className="flex gap-6">
-        <aside className="w-48 shrink-0">
+      <div className="flex flex-col md:flex-row gap-6">
+        <aside className="w-full md:w-48 shrink-0">
           <h3 className="font-bold text-lg mb-4">Categories</h3>
-          <ul className="space-y-2">
+          <ul className="flex flex-wrap gap-2 md:flex-col md:space-y-2">
             {categories.map((cat, ind) => (
               <li key={ind}>
                 <button
@@ -61,7 +61,7 @@ const AllBooksAndCategory = ({ books, categories }) => {
           {filtered.length === 0 ? (
             <p className="text-center text-gray-500 mt-10">No books found!</p>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {filtered.map((book, ind) => (
                 <BookCard key={ind} book={book} />
               ))}
