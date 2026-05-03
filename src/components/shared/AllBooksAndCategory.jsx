@@ -45,7 +45,7 @@ const AllBooksAndCategory = ({ books, categories }) => {
             <li>
               <button
                 onClick={() => setSelected(null)}
-                className={`w-full text-left px-4 py-2 rounded-lg transition
+                className={`text-left px-4 py-2 rounded-lg transition
                   ${
                     selected === null
                       ? "bg-gray-200 text-black"
