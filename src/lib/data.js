@@ -1,25 +1,20 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
-export async function getCategories() {
-  const res = await fetch(`${BASE_URL}/api/categories`);
-  const data = await res.json();
-  return data;
-}
+import books from "@/data/books.json";
 
 export async function getAllBooks() {
-  const res = await fetch(`${BASE_URL}/api/books`);
-  const data = await res.json();
-  return data;
+  return { data: books };
+}
+
+export async function getCategories() {
+  const cats = books.map((b) => b.category);
+  const categories = [...new Set(cats)];
+  return { data: categories };
 }
 
 export async function getBookById(id) {
-  const res = await fetch(`${BASE_URL}/api/books/${id}`);
-  const data = await res.json();
-  return data;
+  const book = books.find((b) => b.id === id);
+  return { data: book };
 }
 
 export async function getFeaturedBooks() {
-  const res = await fetch(`${BASE_URL}/api/books`);
-  const data = await res.json();
-  return data.data.slice(0, 4);
+  return books.slice(0, 4);
 }
